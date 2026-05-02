@@ -46,9 +46,6 @@ function DashboardPage() {
             </p>
           </div>
           <div className="relative z-10 flex gap-md">
-            <button className="primary-gradient text-white px-xl py-md rounded-[12px] font-bold shadow-lg shadow-primary-container/30">
-              Add Funds
-            </button>
             <button className="glass-card px-xl py-md rounded-[12px] font-bold border-white/10 hover:bg-white/5">
               Withdraw
             </button>
@@ -101,52 +98,92 @@ function DashboardPage() {
         </div>
 
         {/* Level Journey */}
-        <div className="glass-card p-xl rounded-[24px] space-y-xl">
+        <div className="glass-card p-xl rounded-[24px] space-y-6">
           <div className="flex justify-between items-end">
             <div className="space-y-1">
               <h3 className="text-lg font-bold text-white">Your Level Journey</h3>
               <p className="text-on-surface-variant text-sm">
-                Progress to next level: Silver (75%)
+                Level 1 of 12 — Progress to Silver (8%)
               </p>
             </div>
             <button className="text-primary text-sm font-bold flex items-center gap-1">
               View Rewards <span className="material-symbols-outlined text-sm">arrow_forward</span>
             </button>
           </div>
-          <div className="relative pt-10 pb-4">
-            <div className="absolute top-1/2 left-0 w-full h-1 bg-surface-container-highest -translate-y-1/2"></div>
-            <div className="absolute top-1/2 left-0 w-[8%] h-1 primary-gradient -translate-y-1/2 shadow-[0_0_15px_#6C47FF]"></div>
-            <div className="relative flex justify-between w-full">
-              <div className="flex flex-col items-center gap-xs -translate-x-1/2">
-                <div className="w-4 h-4 rounded-full primary-gradient ring-4 ring-primary-container/20"></div>
-                <span className="text-[10px] uppercase font-bold text-primary mt-2">Bronze</span>
+
+          {/* Scrollable level track */}
+          <div className="overflow-x-auto pb-4 -mx-2 px-2">
+            <div className="relative min-w-[900px] pt-10 pb-2">
+              {/* Background rail */}
+              <div className="absolute top-[26px] left-0 w-full h-1 bg-surface-container-highest" />
+              {/* Progress fill — 1/12 ≈ 8% */}
+              <div className="absolute top-[26px] left-0 h-1 primary-gradient shadow-[0_0_12px_#6C47FF]" style={{ width: "8%" }} />
+
+              {/* Level nodes */}
+              <div className="relative flex justify-between w-full">
+                {[
+                  { name: "Bronze",   color: "#CD7F32", icon: null,             active: true  },
+                  { name: "Silver",   color: "#C0C0C0", icon: null,             active: false },
+                  { name: "Gold",     color: "#FFD700", icon: null,             active: false },
+                  { name: "Platinum", color: "#E5E4E2", icon: null,             active: false },
+                  { name: "Diamond",  color: "#7DF9FF", icon: "diamond",        active: false },
+                  { name: "Sapphire", color: "#1E90FF", icon: null,             active: false },
+                  { name: "Emerald",  color: "#50C878", icon: null,             active: false },
+                  { name: "Ruby",     color: "#E0115F", icon: null,             active: false },
+                  { name: "Titanium", color: "#9E9E9E", icon: null,             active: false },
+                  { name: "Obsidian", color: "#6B21A8", icon: null,             active: false },
+                  { name: "Mythic",   color: "#FF6EC7", icon: "auto_awesome",   active: false },
+                  { name: "Celestial",color: "#6C47FF", icon: "star",           active: false },
+                ].map((lvl, i) => (
+                  <div key={lvl.name} className="flex flex-col items-center gap-1" style={{ width: `${100 / 12}%` }}>
+                    {/* dot */}
+                    {lvl.active ? (
+                      <div
+                        className="w-5 h-5 rounded-full ring-4 shadow-lg flex-shrink-0"
+                        style={{
+                          background: lvl.color,
+                          ringColor: `${lvl.color}40`,
+                          boxShadow: `0 0 14px ${lvl.color}99`,
+                        }}
+                      />
+                    ) : lvl.icon ? (
+                      <div
+                        className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0"
+                        style={{ background: `${lvl.color}20`, border: `1.5px solid ${lvl.color}50` }}
+                      >
+                        <span className="material-symbols-outlined text-[12px]" style={{ color: lvl.color }}>{lvl.icon}</span>
+                      </div>
+                    ) : (
+                      <div
+                        className="w-4 h-4 rounded-full flex-shrink-0"
+                        style={{ background: `${lvl.color}25`, border: `1.5px solid ${lvl.color}50` }}
+                      />
+                    )}
+                    {/* label */}
+                    <span
+                      className="text-[9px] uppercase font-bold mt-1 text-center leading-tight"
+                      style={{ color: lvl.active ? lvl.color : `${lvl.color}70` }}
+                    >
+                      {i + 1}. {lvl.name}
+                    </span>
+                  </div>
+                ))}
               </div>
-              <div className="flex flex-col items-center gap-xs -translate-x-1/2">
-                <div className="w-4 h-4 rounded-full bg-surface-container-highest"></div>
-                <span className="text-[10px] uppercase font-bold text-on-surface-variant mt-2">
-                  Silver
-                </span>
-              </div>
-              <div className="flex flex-col items-center gap-xs -translate-x-1/2">
-                <div className="w-4 h-4 rounded-full bg-surface-container-highest"></div>
-                <span className="text-[10px] uppercase font-bold text-on-surface-variant mt-2">
-                  Gold
-                </span>
-              </div>
-              <div className="hidden md:flex flex-col items-center gap-xs -translate-x-1/2">
-                <div className="w-4 h-4 rounded-full bg-surface-container-highest"></div>
-                <span className="text-[10px] uppercase font-bold text-on-surface-variant mt-2">
-                  Platinum
-                </span>
-              </div>
-              <div className="flex flex-col items-center gap-xs -translate-x-1/2">
-                <div className="w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center">
-                  <span className="material-symbols-outlined text-[12px] text-secondary">star</span>
-                </div>
-                <span className="text-[10px] uppercase font-bold text-on-surface-variant mt-1">
-                  Celestial
-                </span>
-              </div>
+            </div>
+          </div>
+
+          {/* Active level badge */}
+          <div className="flex items-center gap-3 p-4 rounded-2xl bg-[#CD7F32]/10 border border-[#CD7F32]/20">
+            <div className="w-9 h-9 rounded-xl flex items-center justify-center" style={{ background: "#CD7F3225" }}>
+              <span className="material-symbols-outlined text-[20px]" style={{ color: "#CD7F32", fontVariationSettings: "'FILL' 1" }}>workspace_premium</span>
+            </div>
+            <div className="flex-1">
+              <p className="text-sm font-bold text-white">Bronze Level — Currently Active</p>
+              <p className="text-xs text-white/40 mt-0.5">Reach Silver by growing your network to 100 active nodes</p>
+            </div>
+            <div className="text-right flex-shrink-0">
+              <p className="text-xs font-bold" style={{ color: "#CD7F32" }}>1 / 12</p>
+              <p className="text-[10px] text-white/30 mt-0.5">Levels</p>
             </div>
           </div>
         </div>

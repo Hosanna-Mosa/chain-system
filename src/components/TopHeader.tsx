@@ -28,18 +28,18 @@ export function TopHeader({ user = "Alex Rivera" }: TopHeaderProps) {
           >
             Network
           </Link>
-          <a
+          <Link
+            to="/wallet"
             className="text-slate-400 font-['Inter'] font-medium tracking-tight hover:text-white transition-colors duration-200"
-            href="#"
           >
             Wallet
-          </a>
-          <a
+          </Link>
+          <Link
+            to="/profile"
             className="text-slate-400 font-['Inter'] font-medium tracking-tight hover:text-white transition-colors duration-200"
-            href="#"
           >
             Profile
-          </a>
+          </Link>
         </div>
         <div className="flex items-center gap-4">
           <span className="material-symbols-outlined text-slate-400 hover:text-white cursor-pointer active:scale-95 transition-transform">

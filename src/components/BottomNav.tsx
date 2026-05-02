@@ -44,24 +44,44 @@ export function BottomNav() {
           Network
         </span>
       </Link>
-      <a
-        className="flex flex-col items-center justify-center text-slate-500 px-4 py-2 hover:bg-white/5 transition-all active:scale-90 duration-300"
-        href="#"
+      <Link
+        to="/wallet"
+        className={`flex flex-col items-center justify-center px-4 py-2 transition-all active:scale-90 duration-300 ${
+          isActive("/wallet")
+            ? "text-[#6C47FF] bg-[#6C47FF]/10 rounded-xl"
+            : "text-slate-500 hover:bg-white/5"
+        }`}
       >
-        <span className="material-symbols-outlined mb-1">account_balance_wallet</span>
+        <span
+          className={`material-symbols-outlined mb-1 ${
+            isActive("/wallet") ? "fill-1" : ""
+          }`}
+        >
+          account_balance_wallet
+        </span>
         <span className="text-[11px] font-semibold font-['Inter'] uppercase tracking-widest">
           Wallet
         </span>
-      </a>
-      <a
-        className="flex flex-col items-center justify-center text-slate-500 px-4 py-2 hover:bg-white/5 transition-all active:scale-90 duration-300"
-        href="#"
+      </Link>
+      <Link
+        to="/profile"
+        className={`flex flex-col items-center justify-center px-4 py-2 transition-all active:scale-90 duration-300 ${
+          isActive("/profile")
+            ? "text-[#6C47FF] bg-[#6C47FF]/10 rounded-xl"
+            : "text-slate-500 hover:bg-white/5"
+        }`}
       >
-        <span className="material-symbols-outlined mb-1">person</span>
+        <span
+          className={`material-symbols-outlined mb-1 ${
+            isActive("/profile") ? "fill-1" : ""
+          }`}
+        >
+          person
+        </span>
         <span className="text-[11px] font-semibold font-['Inter'] uppercase tracking-widest">
           Profile
         </span>
-      </a>
+      </Link>
     </nav>
   );
 }
