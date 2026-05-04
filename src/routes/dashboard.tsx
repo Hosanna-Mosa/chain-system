@@ -122,9 +122,9 @@ export default function DashboardPage() {
                         className="w-5 h-5 rounded-full ring-4 shadow-lg flex-shrink-0"
                         style={{
                           background: lvl.color,
-                          ringColor: `${lvl.color}40`,
+                          "--tw-ring-color": `${lvl.color}40`,
                           boxShadow: `0 0 14px ${lvl.color}99`,
-                        }}
+                        } as React.CSSProperties}
                       />
                     ) : lvl.icon ? (
                       <div
