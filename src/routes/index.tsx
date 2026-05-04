@@ -83,7 +83,7 @@ export default function LandingPage() {
           </div>
           
           <h1 className="text-5xl md:text-8xl font-black tracking-tight mb-8 leading-[1.1] max-w-5xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-100">
-            The Future of <span className="text-primary-container bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#B8860B]">Community-Driven</span> Finance
+            The Future of <span className="text-primary-container bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#FFD700]">Community-Driven</span> Finance
           </h1>
           
           <p className="text-lg md:text-2xl text-white/50 max-w-3xl mb-12 leading-relaxed animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-200">
@@ -209,7 +209,7 @@ export default function LandingPage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-10">
-            <div className="glass-card p-12 rounded-[40px] border border-red-500/10 hover:border-red-500/20 transition-all duration-500 relative overflow-hidden group">
+            {/* <div className="glass-card p-12 rounded-[40px] border border-red-500/10 hover:border-red-500/20 transition-all duration-500 relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/5 blur-[80px] -mr-16 -mt-16 group-hover:bg-red-500/10 transition-colors"></div>
               <h3 className="text-2xl font-bold mb-8 flex items-center gap-3 text-red-400">
                 <AlertTriangle className="w-6 h-6" />
@@ -228,7 +228,7 @@ export default function LandingPage() {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             <div className="glass-card p-12 rounded-[40px] border border-primary-container/20 hover:border-primary-container/40 transition-all duration-500 relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary-container/10 blur-[80px] -mr-16 -mt-16 group-hover:bg-primary-container/20 transition-colors"></div>
@@ -331,7 +331,7 @@ export default function LandingPage() {
             <div className="space-y-10">
               {[
                 { label: "Public Sale / Liquidity", value: "40%", desc: "Open to the community for immediate growth.", color: "bg-[#FFD700]" },
-                { label: "Staking Rewards", value: "20%", desc: "Rewarding long-term holders and participants.", color: "bg-[#efa500]" },
+                { label: "Staking Rewards", value: "20%", desc: "Rewarding long-term holders and participants.", color: "bg-[#FFD700]" },
                 { label: "Team (Locked 2 Years)", value: "15%", desc: "Ensuring long-term commitment and trust.", color: "bg-[#3adfab]" },
                 { label: "Marketing & Partnerships", value: "15%", desc: "Fueling global adoption and ecosystem reach.", color: "bg-blue-500" },
                 { label: "Reserve Fund", value: "10%", desc: "Safety net for unexpected ecosystem needs.", color: "bg-white/20" }

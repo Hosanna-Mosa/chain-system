@@ -10,7 +10,7 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 
   /* Color palette - Premium Black & Gold */
-  --color-primary-fixed-dim: #D4AF37;
+  --color-primary-fixed-dim: #FFD700;
   --color-on-background: #F5F5F5;
   --color-on-secondary: #000000;
   --color-tertiary-container: #4D3D00;
@@ -25,26 +25,26 @@
   --color-on-secondary-fixed-variant: #614000;
   --color-on-primary-fixed: #281800;
   --color-on-secondary-container: #5f3f00;
-  --color-primary-container: #B8860B;
-  --color-tertiary-fixed-dim: #C5A021;
+  --color-primary-container: #FFD700;
+  --color-tertiary-fixed-dim: #FFD700;
   --color-on-secondary-fixed: #281800;
   --color-surface-container-high: #141414;
   --color-surface-container-highest: #1A1A1A;
   --color-surface-dim: #050505;
-  --color-secondary-container: #FFB800;
+  --color-secondary-container: #FFD700;
   --color-primary-fixed: #FFECB3;
   --color-on-surface-variant: #A0A0A0;
   --color-inverse-primary: #FFD700;
   --color-on-tertiary-fixed: #1A1A00;
   --color-inverse-on-surface: #1A1A1A;
-  --color-secondary-fixed-dim: #D4AF37;
+  --color-secondary-fixed-dim: #FFD700;
   --color-on-tertiary-container: #FFF9C4;
   --color-surface-variant: #1A1A1A;
   --color-error-container: #93000a;
   --color-on-error-container: #ffdad6;
   --color-tertiary: #FFD700;
   --color-on-surface: #F5F5F5;
-  --color-secondary: #FFB800;
+  --color-secondary: #FFD700;
   --color-surface-container-lowest: #000000;
   --color-on-primary: #000000;
   --color-on-tertiary: #1A1A00;
@@ -155,11 +155,11 @@
 }
 
 .gold-border {
-  border: 1px solid rgba(255, 186, 68, 0.3);
+  border: 1px solid rgba(255, 215, 0, 0.3);
   background: linear-gradient(
     135deg,
-    rgba(255, 186, 68, 0.05) 0%,
-    rgba(255, 186, 68, 0) 100%
+    rgba(255, 215, 0, 0.05) 0%,
+    rgba(255, 215, 0, 0) 100%
   );
 }
 
@@ -171,7 +171,7 @@
 }
 
 .primary-gradient {
-  background: linear-gradient(135deg, #FFD700 0%, #B8860B 100%);
+  background: linear-gradient(135deg, #FFD700 0%, #FFD700 100%);
 }
 
 .material-symbols-outlined {
@@ -195,5 +195,5 @@
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #B8860B;
+  background: #FFD700;
 }

@@ -25,7 +25,7 @@ export default function LoginPage() {
         <Link to="/" className="flex flex-col items-center mb-10 text-center w-full group">
           <div className="relative mb-6 group-hover:scale-105 transition-transform duration-300">
             <div className="absolute inset-0 bg-[#FFD700] blur-3xl opacity-30 rounded-full scale-150"></div>
-            <div className="relative w-20 h-20 bg-gradient-to-br from-[#FFD700] to-[#B8860B] rounded-2xl flex items-center justify-center shadow-[0_0_40px_rgba(255,215,0,0.4)] border border-white/10">
+            <div className="relative w-20 h-20 bg-gradient-to-br from-[#FFD700] to-[#FFD700] rounded-2xl flex items-center justify-center shadow-[0_0_40px_rgba(255,215,0,0.4)] border border-white/10">
               <span
                 className="material-symbols-outlined text-4xl text-white"
                 style={{ fontVariationSettings: "'FILL' 1" }}
@@ -92,7 +92,7 @@ export default function LoginPage() {
             </div>
 
             <button
-              className="w-full bg-gradient-to-r from-[#FFD700] to-[#B8860B] text-black font-bold py-4 rounded-xl shadow-[0_8px_24px_rgba(255,215,0,0.3)] hover:shadow-[0_12px_32px_rgba(255,215,0,0.5)] active:scale-[0.98] transition-all duration-300"
+              className="w-full bg-gradient-to-r from-[#FFD700] to-[#FFD700] text-black font-bold py-4 rounded-xl shadow-[0_8px_24px_rgba(255,215,0,0.3)] hover:shadow-[0_12px_32px_rgba(255,215,0,0.5)] active:scale-[0.98] transition-all duration-300"
               type="submit"
             >
               Login

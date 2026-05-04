@@ -4,8 +4,8 @@ import { BottomNav } from "@/components/BottomNav";
 
 const stats = [
   { label: "Total Referrals", value: "24", icon: "group_add", color: "#FFD700" },
-  { label: "CV Earned", value: "1,250", icon: "toll", color: "#B8860B" },
-  { label: "Days Active", value: "147", icon: "calendar_month", color: "#D4AF37" },
+  { label: "CV Earned", value: "1,250", icon: "toll", color: "#FFD700" },
+  { label: "Days Active", value: "147", icon: "calendar_month", color: "#FFD700" },
   { label: "Current Level", value: "Bronze", icon: "workspace_premium", color: "#CD7F32" },
 ];
 

@@ -184,7 +184,7 @@ export default function RegisterPage() {
                 
                 <button
                   type="submit"
-                  className="w-full py-4 bg-gradient-to-r from-[#FFD700] to-[#B8860B] text-black font-bold rounded-xl shadow-[0_8px_24px_rgba(255,215,0,0.3)] hover:shadow-[0_12px_32px_rgba(255,215,0,0.5)] active:scale-[0.98] transition-all duration-300"
+                  className="w-full py-4 bg-gradient-to-r from-[#FFD700] to-[#FFD700] text-black font-bold rounded-xl shadow-[0_8px_24px_rgba(255,215,0,0.3)] hover:shadow-[0_12px_32px_rgba(255,215,0,0.5)] active:scale-[0.98] transition-all duration-300"
                 >
                   Continue to Deposit
                 </button>
@@ -309,7 +309,7 @@ export default function RegisterPage() {
                 <div className="space-y-4 pt-4">
                   <button
                     type="submit"
-                    className="w-full py-4 bg-gradient-to-r from-[#FFD700] to-[#B8860B] text-black font-bold rounded-xl shadow-[0_8px_24px_rgba(255,215,0,0.3)] hover:shadow-[0_12px_32px_rgba(255,215,0,0.5)] active:scale-[0.98] transition-all duration-300"
+                    className="w-full py-4 bg-gradient-to-r from-[#FFD700] to-[#FFD700] text-black font-bold rounded-xl shadow-[0_8px_24px_rgba(255,215,0,0.3)] hover:shadow-[0_12px_32px_rgba(255,215,0,0.5)] active:scale-[0.98] transition-all duration-300"
                   >
                     Complete Registration
                   </button>
