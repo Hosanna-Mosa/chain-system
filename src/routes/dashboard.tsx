@@ -97,7 +97,7 @@ export default function DashboardPage() {
               {/* Background rail */}
               <div className="absolute top-[26px] left-0 w-full h-1 bg-surface-container-highest" />
               {/* Progress fill — 1/12 ≈ 8% */}
-              <div className="absolute top-[26px] left-0 h-1 primary-gradient shadow-[0_0_12px_#6C47FF]" style={{ width: "8%" }} />
+              <div className="absolute top-[26px] left-0 h-1 primary-gradient shadow-[0_0_12px_#FFD700]" style={{ width: "8%" }} />
 
               {/* Level nodes */}
               <div className="relative flex justify-between w-full">
@@ -113,7 +113,7 @@ export default function DashboardPage() {
                   { name: "Titanium", color: "#9E9E9E", icon: null,             active: false },
                   { name: "Obsidian", color: "#6B21A8", icon: null,             active: false },
                   { name: "Mythic",   color: "#FF6EC7", icon: "auto_awesome",   active: false },
-                  { name: "Celestial",color: "#6C47FF", icon: "star",           active: false },
+                  { name: "Celestial",color: "#FFD700", icon: "star",           active: false },
                 ].map((lvl, i) => (
                   <div key={lvl.name} className="flex flex-col items-center gap-1" style={{ width: `${100 / 12}%` }}>
                     {/* dot */}

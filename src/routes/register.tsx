@@ -34,9 +34,9 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0e0d17] text-white">
+    <div className="min-h-screen bg-[#000000] text-white">
       {/* Custom Header */}
-      <header className="w-full h-16 flex items-center justify-between px-6 border-b border-white/5 bg-[#0e0d17]/80 backdrop-blur-md sticky top-0 z-50">
+      <header className="w-full h-16 flex items-center justify-between px-6 border-b border-white/5 bg-[#000000]/80 backdrop-blur-md sticky top-0 z-50">
         <Link to="/" className="flex items-center gap-2">
           <span className="text-xl font-black tracking-tight whitespace-nowrap">ChainVerse</span>
         </Link>
@@ -70,10 +70,10 @@ export default function RegisterPage() {
         {/* Step Indicator */}
         <div className="flex items-center gap-4 mb-8 w-full max-w-[300px]">
           <div className="flex-1 h-1 rounded-full overflow-hidden bg-white/5">
-            <div className={`h-full bg-[#6C47FF] transition-all duration-500 ${step >= 1 ? "w-full" : "w-0"}`} />
+            <div className={`h-full bg-[#FFD700] transition-all duration-500 ${step >= 1 ? "w-full" : "w-0"}`} />
           </div>
           <div className="flex-1 h-1 rounded-full overflow-hidden bg-white/5">
-            <div className={`h-full bg-[#6C47FF] transition-all duration-500 ${step >= 2 ? "w-full" : "w-0"}`} />
+            <div className={`h-full bg-[#FFD700] transition-all duration-500 ${step >= 2 ? "w-full" : "w-0"}`} />
           </div>
         </div>
 
@@ -90,7 +90,7 @@ export default function RegisterPage() {
                     name="fullName"
                     value={formData.fullName}
                     onChange={handleInputChange}
-                    className="w-full bg-white/5 border border-white/5 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-[#6C47FF]/50 focus:ring-1 focus:ring-[#6C47FF]/50 transition-all"
+                    className="w-full bg-white/5 border border-white/5 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-[#FFD700]/50 focus:ring-1 focus:ring-[#FFD700]/50 transition-all"
                     placeholder="Alex Rivera"
                     type="text"
                     required
@@ -105,7 +105,7 @@ export default function RegisterPage() {
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full bg-white/5 border border-white/5 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-[#6C47FF]/50 focus:ring-1 focus:ring-[#6C47FF]/50 transition-all"
+                    className="w-full bg-white/5 border border-white/5 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-[#FFD700]/50 focus:ring-1 focus:ring-[#FFD700]/50 transition-all"
                     placeholder="alex.rivera@chainverse.com"
                     type="email"
                     required
@@ -121,7 +121,7 @@ export default function RegisterPage() {
                       name="password"
                       value={formData.password}
                       onChange={handleInputChange}
-                      className="w-full bg-white/5 border border-white/5 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-[#6C47FF]/50 focus:ring-1 focus:ring-[#6C47FF]/50 transition-all"
+                      className="w-full bg-white/5 border border-white/5 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-[#FFD700]/50 focus:ring-1 focus:ring-[#FFD700]/50 transition-all"
                       placeholder="••••••••"
                       type="password"
                       required
@@ -135,7 +135,7 @@ export default function RegisterPage() {
                       name="confirmPassword"
                       value={formData.confirmPassword}
                       onChange={handleInputChange}
-                      className="w-full bg-white/5 border border-white/5 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-[#6C47FF]/50 focus:ring-1 focus:ring-[#6C47FF]/50 transition-all"
+                      className="w-full bg-white/5 border border-white/5 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-[#FFD700]/50 focus:ring-1 focus:ring-[#FFD700]/50 transition-all"
                       placeholder="••••••••"
                       type="password"
                       required
@@ -144,16 +144,16 @@ export default function RegisterPage() {
                 </div>
 
                 <div className="group">
-                  <label className="block text-[10px] font-bold text-[#6C47FF] tracking-widest uppercase mb-2">
+                  <label className="block text-[10px] font-bold text-[#FFD700] tracking-widest uppercase mb-2">
                     Referral Code (Optional)
                   </label>
                   <div className="relative">
-                    <span className="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-[#6C47FF] text-[20px]">confirmation_number</span>
+                    <span className="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-[#FFD700] text-[20px]">confirmation_number</span>
                     <input
                       name="referralCode"
                       value={formData.referralCode}
                       onChange={handleInputChange}
-                      className="w-full bg-[#6C47FF]/5 border border-[#6C47FF]/20 rounded-xl pl-12 pr-4 py-3 text-white placeholder:text-[#6C47FF]/40 focus:outline-none focus:border-[#6C47FF] transition-all"
+                      className="w-full bg-[#FFD700]/5 border border-[#FFD700]/20 rounded-xl pl-12 pr-4 py-3 text-white placeholder:text-[#FFD700]/40 focus:outline-none focus:border-[#FFD700] transition-all"
                       placeholder="Enter Referral Code"
                       type="text"
                     />
@@ -164,18 +164,18 @@ export default function RegisterPage() {
               <div className="space-y-6">
                 <div className="flex items-start gap-3">
                   <input
-                    className="mt-1 w-4 h-4 rounded border-white/10 bg-white/5 text-[#6C47FF] focus:ring-[#6C47FF]/50 transition-all cursor-pointer"
+                    className="mt-1 w-4 h-4 rounded border-white/10 bg-white/5 text-[#FFD700] focus:ring-[#FFD700]/50 transition-all cursor-pointer"
                     id="terms"
                     type="checkbox"
                     required
                   />
                   <label className="text-white/40 text-xs leading-relaxed cursor-pointer" htmlFor="terms">
                     I agree to the{" "}
-                    <a className="text-[#6C47FF] hover:underline" href="#">
+                    <a className="text-[#FFD700] hover:underline" href="#">
                       Terms & Conditions
                     </a>{" "}
                     and acknowledge the{" "}
-                    <a className="text-[#6C47FF] hover:underline" href="#">
+                    <a className="text-[#FFD700] hover:underline" href="#">
                       Privacy Policy
                     </a>{" "}
                     of ChainVerse Global.
@@ -184,7 +184,7 @@ export default function RegisterPage() {
                 
                 <button
                   type="submit"
-                  className="w-full py-4 bg-gradient-to-r from-[#6C47FF] to-[#5e35f1] text-white font-bold rounded-xl shadow-[0_8px_24px_rgba(108,71,255,0.4)] hover:shadow-[0_12px_32px_rgba(108,71,255,0.6)] active:scale-[0.98] transition-all duration-300"
+                  className="w-full py-4 bg-gradient-to-r from-[#FFD700] to-[#B8860B] text-black font-bold rounded-xl shadow-[0_8px_24px_rgba(255,215,0,0.3)] hover:shadow-[0_12px_32px_rgba(255,215,0,0.5)] active:scale-[0.98] transition-all duration-300"
                 >
                   Continue to Deposit
                 </button>
@@ -198,7 +198,7 @@ export default function RegisterPage() {
                   onClick={() => setDepositOption("single")}
                   className={`flex-1 py-3 rounded-xl text-xs font-bold transition-all ${
                     depositOption === "single"
-                      ? "bg-[#6C47FF] text-white shadow-lg"
+                      ? "bg-[#FFD700] text-black shadow-lg"
                       : "text-white/40 hover:text-white"
                   }`}
                 >
@@ -208,7 +208,7 @@ export default function RegisterPage() {
                   onClick={() => setDepositOption("split")}
                   className={`flex-1 py-3 rounded-xl text-xs font-bold transition-all ${
                     depositOption === "split"
-                      ? "bg-[#6C47FF] text-white shadow-lg"
+                      ? "bg-[#FFD700] text-black shadow-lg"
                       : "text-white/40 hover:text-white"
                   }`}
                 >
@@ -243,14 +243,14 @@ export default function RegisterPage() {
                         <p className="text-xs font-mono text-white/80 break-all">TJ3V...9xZ7k</p>
                       </div>
                       <div className="group">
-                        <label className="block text-[10px] font-bold text-[#6C47FF] tracking-widest uppercase mb-2">
+                        <label className="block text-[10px] font-bold text-[#FFD700] tracking-widest uppercase mb-2">
                           TRX Payment Reference ID
                         </label>
                         <input
                           name="trxRefId"
                           value={formData.trxRefId}
                           onChange={handleInputChange}
-                          className="w-full bg-white/5 border border-[#6C47FF]/30 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-[#6C47FF] transition-all"
+                          className="w-full bg-white/5 border border-[#FFD700]/30 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-[#FFD700] transition-all"
                           placeholder="Enter TRX Hash/TXID"
                           type="text"
                           required
@@ -267,18 +267,18 @@ export default function RegisterPage() {
                     <div className="space-y-6">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 rounded-full bg-[#6C47FF]/10 flex items-center justify-center border border-[#6C47FF]/20 text-[#6C47FF]">
+                          <div className="w-8 h-8 rounded-full bg-[#FFD700]/10 flex items-center justify-center border border-[#FFD700]/20 text-[#FFD700]">
                             <span className="material-symbols-outlined text-[18px]">toll</span>
                           </div>
                           <h3 className="text-lg font-bold text-white">CV Coin Deposit</h3>
                         </div>
-                        <div className="bg-[#6C47FF]/10 border border-[#6C47FF]/30 px-3 py-1 rounded-full">
-                          <p className="text-[10px] font-black text-[#6C47FF] uppercase tracking-tighter">Min Deposit: 25 CV</p>
+                        <div className="bg-[#FFD700]/10 border border-[#FFD700]/30 px-3 py-1 rounded-full">
+                          <p className="text-[10px] font-black text-[#FFD700] uppercase tracking-tighter">Min Deposit: 25 CV</p>
                         </div>
                       </div>
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
-                        <div className="bg-white p-3 rounded-2xl w-32 h-32 mx-auto sm:mx-0 shadow-[0_0_20px_rgba(108,71,255,0.2)] flex items-center justify-center">
+                        <div className="bg-white p-3 rounded-2xl w-32 h-32 mx-auto sm:mx-0 shadow-[0_0_20px_rgba(255,215,0,0.2)] flex items-center justify-center">
                           <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=CV_ADDRESS_HERE" alt="QR CV" className="w-full h-full" />
                         </div>
                         <div className="space-y-4">
@@ -287,14 +287,14 @@ export default function RegisterPage() {
                             <p className="text-xs font-mono text-white/80 break-all">CV_0x...eA4f</p>
                           </div>
                           <div className="group">
-                            <label className="block text-[10px] font-bold text-[#6C47FF] tracking-widest uppercase mb-2">
+                            <label className="block text-[10px] font-bold text-[#FFD700] tracking-widest uppercase mb-2">
                               CV Payment Reference ID
                             </label>
                             <input
                               name="cvRefId"
                               value={formData.cvRefId}
                               onChange={handleInputChange}
-                              className="w-full bg-white/5 border border-[#6C47FF]/30 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-[#6C47FF] transition-all"
+                              className="w-full bg-white/5 border border-[#FFD700]/30 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-[#FFD700] transition-all"
                               placeholder="Enter CV Hash/TXID"
                               type="text"
                               required
@@ -309,7 +309,7 @@ export default function RegisterPage() {
                 <div className="space-y-4 pt-4">
                   <button
                     type="submit"
-                    className="w-full py-4 bg-gradient-to-r from-[#6C47FF] to-[#5e35f1] text-white font-bold rounded-xl shadow-[0_8px_24px_rgba(108,71,255,0.4)] hover:shadow-[0_12px_32px_rgba(108,71,255,0.6)] active:scale-[0.98] transition-all duration-300"
+                    className="w-full py-4 bg-gradient-to-r from-[#FFD700] to-[#B8860B] text-black font-bold rounded-xl shadow-[0_8px_24px_rgba(255,215,0,0.3)] hover:shadow-[0_12px_32px_rgba(255,215,0,0.5)] active:scale-[0.98] transition-all duration-300"
                   >
                     Complete Registration
                   </button>

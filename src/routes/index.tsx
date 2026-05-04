@@ -19,7 +19,7 @@ import {
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-[#0e0d17] text-white selection:bg-primary-container selection:text-white font-sans">
+    <div className="min-h-screen bg-[#000000] text-white selection:bg-primary-container selection:text-black font-sans">
       {/* Background elements */}
       <div className="fixed inset-0 z-0 mesh-gradient opacity-40 pointer-events-none"></div>
       <div className="fixed top-[-10%] left-[-10%] w-[600px] h-[600px] bg-primary-container/20 blur-[140px] rounded-full pointer-events-none"></div>
@@ -63,7 +63,7 @@ export default function LandingPage() {
             </Link>
             <Link 
               to="/register" 
-              className="px-6 py-2.5 text-sm font-bold primary-gradient rounded-full shadow-[0_8px_20px_rgba(108,71,255,0.3)] hover:shadow-[0_12px_25px_rgba(108,71,255,0.5)] hover:scale-[1.05] active:scale-[0.98] transition-all duration-300"
+              className="px-6 py-2.5 text-sm font-bold primary-gradient rounded-full shadow-[0_8px_20px_rgba(255,215,0,0.3)] hover:shadow-[0_12px_25px_rgba(255,215,0,0.5)] hover:scale-[1.05] text-black active:scale-[0.98] transition-all duration-300"
             >
               Register Now
             </Link>
@@ -83,7 +83,7 @@ export default function LandingPage() {
           </div>
           
           <h1 className="text-5xl md:text-8xl font-black tracking-tight mb-8 leading-[1.1] max-w-5xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-100">
-            The Future of <span className="text-primary-container bg-clip-text text-transparent bg-gradient-to-r from-[#6C47FF] to-[#c9beff]">Community-Driven</span> Finance
+            The Future of <span className="text-primary-container bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#B8860B]">Community-Driven</span> Finance
           </h1>
           
           <p className="text-lg md:text-2xl text-white/50 max-w-3xl mb-12 leading-relaxed animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-200">
@@ -330,7 +330,7 @@ export default function LandingPage() {
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="space-y-10">
               {[
-                { label: "Public Sale / Liquidity", value: "40%", desc: "Open to the community for immediate growth.", color: "bg-[#6C47FF]" },
+                { label: "Public Sale / Liquidity", value: "40%", desc: "Open to the community for immediate growth.", color: "bg-[#FFD700]" },
                 { label: "Staking Rewards", value: "20%", desc: "Rewarding long-term holders and participants.", color: "bg-[#efa500]" },
                 { label: "Team (Locked 2 Years)", value: "15%", desc: "Ensuring long-term commitment and trust.", color: "bg-[#3adfab]" },
                 { label: "Marketing & Partnerships", value: "15%", desc: "Fueling global adoption and ecosystem reach.", color: "bg-blue-500" },
@@ -373,8 +373,8 @@ export default function LandingPage() {
                 <h4 className="text-xl font-bold mb-2">2% Holder Rewards</h4>
                 <p className="text-sm text-white/50 leading-relaxed">Earn passive ABC simply by holding. Redistributed automatically to all community wallets.</p>
               </div>
-              <div className="glass-card p-10 rounded-[32px] border-purple-500/10 hover:border-purple-500/30 transition-all duration-500">
-                <div className="w-14 h-14 rounded-2xl bg-purple-500/20 flex items-center justify-center text-purple-500 mb-6">
+              <div className="glass-card p-10 rounded-[32px] border-[#FFD700]/10 hover:border-[#FFD700]/30 transition-all duration-500">
+                <div className="w-14 h-14 rounded-2xl bg-[#FFD700]/20 flex items-center justify-center text-[#FFD700] mb-6">
                   <Lock className="w-7 h-7" />
                 </div>
                 <h4 className="text-xl font-bold mb-2">2-Year Lock</h4>
@@ -484,7 +484,7 @@ export default function LandingPage() {
                   </div>
                   <div className="col-span-2 glass-card p-10 rounded-[32px] border-white/10 hover:bg-white/5 transition-all group flex items-center justify-between">
                     <div className="flex items-center gap-6">
-                      <div className="w-16 h-16 rounded-2xl bg-purple-500/20 flex items-center justify-center text-purple-400 group-hover:scale-110 transition-transform">
+                      <div className="w-16 h-16 rounded-2xl bg-[#FFD700]/20 flex items-center justify-center text-[#FFD700] group-hover:scale-110 transition-transform">
                         <Vote className="w-8 h-8" />
                       </div>
                       <div>
@@ -534,7 +534,7 @@ export default function LandingPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-6">
             <Link 
               to="/register" 
-              className="px-12 py-6 text-xl font-black primary-gradient rounded-[24px] shadow-2xl shadow-primary-container/30 hover:shadow-primary-container/60 hover:-translate-y-2 active:scale-[0.98] transition-all duration-500"
+              className="px-12 py-6 text-xl font-black primary-gradient rounded-[24px] shadow-2xl shadow-primary-container/30 hover:shadow-primary-container/60 text-black font-black hover:-translate-y-2 active:scale-[0.98] transition-all duration-500"
             >
               Get $ABC Tokens
             </Link>
@@ -549,7 +549,7 @@ export default function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-24 px-6 border-t border-white/5 bg-[#0a0912]">
+      <footer className="py-24 px-6 border-t border-white/5 bg-[#000000]">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-16 mb-24">
             <div className="col-span-1 md:col-span-1 space-y-8">

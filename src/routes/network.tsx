@@ -15,32 +15,32 @@ const deepTreeData: TreeNode = {
   name: "Alex Rivera", level: "Bronze",
   children: [
     {
-      name: "Sarah J.", level: "Bronze", side: "L", sideColor: "cyan",
+      name: "Sarah J.", level: "Bronze", side: "L", sideColor: "gold-light",
       children: [
         {
-          name: "Kevin L.", level: "Bronze", side: "L", sideColor: "cyan",
+          name: "Kevin L.", level: "Bronze", side: "L", sideColor: "gold-light",
           children: [
-            { name: "Priya M.", level: "Bronze", side: "L", sideColor: "cyan", children: [{ name: "Tom H.", level: "Bronze", side: "L", sideColor: "cyan" }, { name: "Empty", level: "", side: "R", sideColor: "cyan" }] },
-            { name: "Jake W.", level: "Bronze", side: "R", sideColor: "cyan", children: [{ name: "Lena K.", level: "Bronze", side: "L", sideColor: "cyan" }, { name: "Empty", level: "", side: "R", sideColor: "cyan" }] },
+            { name: "Priya M.", level: "Bronze", side: "L", sideColor: "gold-light", children: [{ name: "Tom H.", level: "Bronze", side: "L", sideColor: "gold-light" }, { name: "Empty", level: "", side: "R", sideColor: "gold-light" }] },
+            { name: "Jake W.", level: "Bronze", side: "R", sideColor: "gold-light", children: [{ name: "Lena K.", level: "Bronze", side: "L", sideColor: "gold-light" }, { name: "Empty", level: "", side: "R", sideColor: "gold-light" }] },
           ],
         },
         {
-          name: "Empty", level: "", side: "R", sideColor: "cyan",
+          name: "Empty", level: "", side: "R", sideColor: "gold-light",
         },
       ],
     },
     {
-      name: "Marcus V.", level: "Bronze", side: "R", sideColor: "purple",
+      name: "Marcus V.", level: "Bronze", side: "R", sideColor: "gold-dark",
       children: [
         {
-          name: "Elena S.", level: "Bronze", side: "L", sideColor: "purple",
+          name: "Elena S.", level: "Bronze", side: "L", sideColor: "gold-dark",
           children: [
-            { name: "Raj P.", level: "Bronze", side: "L", sideColor: "purple", children: [{ name: "Nina O.", level: "Bronze", side: "L", sideColor: "purple" }, { name: "Empty", level: "", side: "R", sideColor: "purple" }] },
-            { name: "Zoe C.", level: "Bronze", side: "R", sideColor: "purple", children: [{ name: "Empty", level: "", side: "L", sideColor: "purple" }, { name: "Empty", level: "", side: "R", sideColor: "purple" }] },
+            { name: "Raj P.", level: "Bronze", side: "L", sideColor: "gold-dark", children: [{ name: "Nina O.", level: "Bronze", side: "L", sideColor: "gold-dark" }, { name: "Empty", level: "", side: "R", sideColor: "gold-dark" }] },
+            { name: "Zoe C.", level: "Bronze", side: "R", sideColor: "gold-dark", children: [{ name: "Empty", level: "", side: "L", sideColor: "gold-dark" }, { name: "Empty", level: "", side: "R", sideColor: "gold-dark" }] },
           ],
         },
         {
-          name: "Empty", level: "", side: "R", sideColor: "purple",
+          name: "Empty", level: "", side: "R", sideColor: "gold-dark",
         },
       ],
     },
@@ -52,8 +52,8 @@ function FullTreeNode({ node, depth = 0 }: { node: TreeNode; depth?: number }) {
   const [open, setOpen] = useState(depth < 2);
   const isEmpty = node.name === "Empty";
   const hasChildren = node.children && node.children.length > 0;
-  const colorClass = node.sideColor === "cyan" ? "border-cyan-500/40 text-cyan-400" : node.sideColor === "purple" ? "border-purple-500/40 text-purple-400" : "border-[#6C47FF]/40 text-[#6C47FF]";
-  const bgClass = node.sideColor === "cyan" ? "bg-cyan-500/10" : node.sideColor === "purple" ? "bg-purple-500/10" : "bg-[#6C47FF]/10";
+  const colorClass = node.sideColor === "gold-light" ? "border-[#FFD700]/40 text-[#FFD700]" : node.sideColor === "gold-dark" ? "border-[#B8860B]/40 text-[#B8860B]" : "border-[#FFD700]/40 text-[#FFD700]";
+  const bgClass = node.sideColor === "gold-light" ? "bg-[#FFD700]/10" : node.sideColor === "gold-dark" ? "bg-[#B8860B]/10" : "bg-[#FFD700]/10";
 
   return (
     <div className="flex flex-col items-start">
@@ -72,7 +72,7 @@ function FullTreeNode({ node, depth = 0 }: { node: TreeNode; depth?: number }) {
             onClick={() => hasChildren && setOpen((p) => !p)}
           >
             {node.side && (
-              <span className={`text-[9px] font-black px-1.5 py-0.5 rounded-full ${node.sideColor === "cyan" ? "bg-cyan-500 text-white" : "bg-purple-500 text-white"}`}>
+              <span className={`text-[9px] font-black px-1.5 py-0.5 rounded-full ${node.sideColor === "gold-light" ? "bg-[#FFD700] text-black" : "bg-[#B8860B] text-black"}`}>
                 {node.side}
               </span>
             )}
@@ -109,7 +109,7 @@ function FullTreeModal({ onClose }: { onClose: () => void }) {
       {/* backdrop */}
       <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" onClick={onClose} />
 
-      <div className="relative z-10 w-full max-w-2xl bg-[#14121c] border border-white/10 rounded-[24px] shadow-2xl flex flex-col max-h-[85vh]">
+      <div className="relative z-10 w-full max-w-2xl bg-[#000000] border border-white/10 rounded-[24px] shadow-2xl flex flex-col max-h-[85vh]">
         {/* header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-white/5 flex-shrink-0">
           <div>
@@ -132,7 +132,7 @@ function FullTreeModal({ onClose }: { onClose: () => void }) {
         {/* footer */}
         <div className="px-6 py-3 border-t border-white/5 flex-shrink-0 flex items-center justify-between">
           <p className="text-[10px] text-white/30 font-bold tracking-widest uppercase">Total: 1,248 Nodes</p>
-          <button onClick={onClose} className="text-xs font-bold text-[#6C47FF] hover:underline">Close</button>
+          <button onClick={onClose} className="text-xs font-bold text-[#FFD700] hover:underline">Close</button>
         </div>
       </div>
     </div>
@@ -160,8 +160,8 @@ export default function NetworkPage() {
           <div className="flex flex-col items-center min-w-[800px] space-y-24 relative">
             {/* Level 1 */}
             <div className="relative z-10">
-              <div className="glass-card p-6 rounded-2xl flex flex-col items-center w-48 shadow-[0_0_30px_rgba(108,71,255,0.15)] border-[#6C47FF]/20">
-                <div className="w-20 h-20 rounded-full border-4 border-[#6C47FF] p-1 mb-3 relative">
+              <div className="glass-card p-6 rounded-2xl flex flex-col items-center w-48 shadow-[0_0_30px_rgba(255,215,0,0.15)] border-[#FFD700]/20">
+                <div className="w-20 h-20 rounded-full border-4 border-[#FFD700] p-1 mb-3 relative">
                   <img alt="User profile" className="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCupfFzYo-skglopSjMT4IFqkKh7pT3cmiTfvNm9Uz3NGHXcdIGea85IfatQ5n0rvA6-DeF22_2uJK-ZHbhQLbagyOP9q1NprX03tO_GPERfKucQv93CsKQQbptzCGu3uW5iYhBzcM2EoQcA2t_YV1i5DdbYWI5KiDZ3b4c8VTKWIjXx2AiAz6N8EhTO6HkqQNzZAWU_hivK2KV3v6ipqGqtY9SrRYmSI3wayFaYzbP0j9U5r3hO5K9ojbpKTvN-e6mXq4TXWSn" />
                   <div className="absolute -bottom-1 -right-1 bg-secondary-container text-on-secondary-container text-[10px] px-2 py-0.5 rounded-full font-bold">PRO</div>
                 </div>
@@ -177,13 +177,13 @@ export default function NetworkPage() {
             {/* Level 2 */}
             <div className="flex justify-between w-[800px] gap-24 relative z-10">
               <div className="relative flex flex-col items-center">
-                <div className="glass-card p-4 rounded-2xl flex flex-col items-center w-40 border-cyan-500/30 shadow-[0_0_20px_rgba(6,182,212,0.1)]">
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-cyan-500 text-white text-[10px] px-3 py-0.5 rounded-full font-black">L</div>
-                  <div className="w-14 h-14 rounded-full border-2 border-cyan-500/50 p-1 mb-2">
+                <div className="glass-card p-4 rounded-2xl flex flex-col items-center w-40 border-[#FFD700]/30 shadow-[0_0_20px_rgba(255,215,0,0.1)]">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#FFD700] text-black text-[10px] px-3 py-0.5 rounded-full font-black">L</div>
+                  <div className="w-14 h-14 rounded-full border-2 border-[#FFD700]/50 p-1 mb-2">
                     <img alt="Node User" className="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhIRPHC-VaLulk0nPT5XH2niMYHX6rrH4KVKSCrfWtsCIecfDRglDuj9sMQaxZhwvNuYi8jyiPGOZNZGF5qeIvJG0NFvK20j7AQBh2FHep0Jpynj_2VBjAalaXefoGjmzobOlMW5y_wKk3KHx84JHIRyrZN9Uy9dmGDMiSd3AIeFP7OGlmMT074JCLz-ZOEncFXuEjl3clasBDZw5vpO8ZLShrFdIpc9wLsmvA7qltQ9UkmOOa36xydzewbBREcacqCdBjh2gU" />
                   </div>
                   <span className="text-sm font-semibold text-white">Sarah J.</span>
-                  <span className="text-[10px] text-cyan-400 font-bold uppercase">Bronze</span>
+                  <span className="text-[10px] text-[#FFD700] font-bold uppercase">Bronze</span>
                 </div>
                 <svg className="absolute top-full left-1/2 -translate-x-1/2 w-[200px] h-24 overflow-visible pointer-events-none">
                   <path className="text-white/10" d="M 100 0 L 0 96" fill="none" stroke="currentColor" strokeWidth="1.5" />
@@ -191,13 +191,13 @@ export default function NetworkPage() {
                 </svg>
               </div>
               <div className="relative flex flex-col items-center">
-                <div className="glass-card p-4 rounded-2xl flex flex-col items-center w-40 border-purple-500/30 shadow-[0_0_20px_rgba(168,85,247,0.1)]">
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-purple-500 text-white text-[10px] px-3 py-0.5 rounded-full font-black">R</div>
-                  <div className="w-14 h-14 rounded-full border-2 border-purple-500/50 p-1 mb-2">
+                <div className="glass-card p-4 rounded-2xl flex flex-col items-center w-40 border-[#B8860B]/30 shadow-[0_0_20px_rgba(184,134,11,0.1)]">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#B8860B] text-white text-[10px] px-3 py-0.5 rounded-full font-black">R</div>
+                  <div className="w-14 h-14 rounded-full border-2 border-[#B8860B]/50 p-1 mb-2">
                     <img alt="Node User" className="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf5s6IP12spDTTUHt4s3bYx_9x6M3ug8O0mQsmNluSR6ZsWeYSgjHR78oA1sLHWvmddxBkwAVwIynCoBf2pAyfdNR3AlBgAM0D8Rh2bkcQsWXuWYcIOxBLHX9CmNeXoo7--ZUpFCMa-ymismv1g6rRe5kOK0reTn24ZvujkFhwpsuVq2deZtslMjS9NiUzgjON6qOo5xP1FpiGiIKAl26dlPRoBi5UnVlzZcft8D25i-vpSqdAB-cfEafIoTB0ubnk93IfnuNp" />
                   </div>
                   <span className="text-sm font-semibold text-white">Marcus V.</span>
-                  <span className="text-[10px] text-purple-400 font-bold uppercase">Bronze</span>
+                  <span className="text-[10px] text-[#B8860B] font-bold uppercase">Bronze</span>
                 </div>
                 <svg className="absolute top-full left-1/2 -translate-x-1/2 w-[200px] h-24 overflow-visible pointer-events-none">
                   <path className="text-white/10" d="M 100 0 L 0 96" fill="none" stroke="currentColor" strokeWidth="1.5" />
@@ -208,27 +208,27 @@ export default function NetworkPage() {
 
             {/* Level 3 */}
             <div className="flex justify-between w-[900px] gap-8 relative z-10">
-              <div className="glass-card p-4 rounded-2xl flex flex-col items-center w-36 border-cyan-500/20 opacity-90">
-                <div className="w-12 h-12 rounded-full border-2 border-cyan-500/30 p-1 mb-2">
+              <div className="glass-card p-4 rounded-2xl flex flex-col items-center w-36 border-[#FFD700]/20 opacity-90">
+                <div className="w-12 h-12 rounded-full border-2 border-[#FFD700]/30 p-1 mb-2">
                   <img alt="Node User" className="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAk0YlR-NEKY9qInbXSgy1nYPKWXBhef9uwCORBfa5X4IpXi86toU66oKbqxOkD0CpsTa4DGWrA6ZOfHg5ZkmxDEq6QEVPHANxmNAgoSrMTV73L_A52HJNIyjGmt26OE7yZFiAh2iw6syhLTAvclS6B-MXob-fY0foQMvzaJrdjKops-aXK_pWh46ggnHnypyn6_tRK2j1ZsOvXvFxDeYLmbMYGwEVDz1VvZJldUtxcb6Hrh0juBV-UQnpMOGP61ekQXbEbwzD" />
                 </div>
                 <span className="text-sm font-semibold text-white">Kevin L.</span>
-                <span className="text-[9px] text-cyan-400 font-bold uppercase">Bronze</span>
+                <span className="text-[9px] text-[#FFD700] font-bold uppercase">Bronze</span>
               </div>
-              <div className="border-2 border-dashed border-cyan-500/20 bg-cyan-500/5 p-4 rounded-2xl flex flex-col items-center justify-center w-36 cursor-pointer hover:bg-cyan-500/10 transition-colors">
-                <span className="material-symbols-outlined text-cyan-400 mb-1">add</span>
-                <span className="text-[10px] font-bold text-cyan-400 uppercase">Empty</span>
+              <div className="border-2 border-dashed border-[#FFD700]/20 bg-[#FFD700]/5 p-4 rounded-2xl flex flex-col items-center justify-center w-36 cursor-pointer hover:bg-[#FFD700]/10 transition-colors">
+                <span className="material-symbols-outlined text-[#FFD700] mb-1">add</span>
+                <span className="text-[10px] font-bold text-[#FFD700] uppercase">Empty</span>
               </div>
-              <div className="glass-card p-4 rounded-2xl flex flex-col items-center w-36 border-purple-500/20 opacity-90">
-                <div className="w-12 h-12 rounded-full border-2 border-purple-500/30 p-1 mb-2">
+              <div className="glass-card p-4 rounded-2xl flex flex-col items-center w-36 border-[#B8860B]/20 opacity-90">
+                <div className="w-12 h-12 rounded-full border-2 border-[#B8860B]/30 p-1 mb-2">
                   <img alt="Node User" className="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBT1LbpBpTjk0w4e8tWG7q6uI64dFuKjLtNmMnmlwBjVjGIxDq52BNArUJyUlGQgn1v3JVveHaOLRckC3JNUCVU2hvsiZAYpwqiBXt-vJqKanmWuPvUY3wI76pJBcTxRGDUEnBrJBCIuM8bOUaaxv7TZ4EYB4Y9KiiEaRWvFVHGnFbhW_C1PGbhbjkqvdUv2ne8t9sxxR36_TjGjjXhsjDApjsTo5OdgqI1LN_f1Mxnj5TSEl4q6gqeucJcblfw12bmPRTFZpVD" />
                 </div>
                 <span className="text-sm font-semibold text-white">Elena S.</span>
-                <span className="text-[9px] text-purple-400 font-bold uppercase">Bronze</span>
+                <span className="text-[9px] text-[#B8860B] font-bold uppercase">Bronze</span>
               </div>
-              <div className="border-2 border-dashed border-purple-500/20 bg-purple-500/5 p-4 rounded-2xl flex flex-col items-center justify-center w-36 cursor-pointer hover:bg-purple-500/10 transition-colors">
-                <span className="material-symbols-outlined text-purple-400 mb-1">add</span>
-                <span className="text-[10px] font-bold text-purple-400 uppercase">Empty</span>
+              <div className="border-2 border-dashed border-[#B8860B]/20 bg-[#B8860B]/5 p-4 rounded-2xl flex flex-col items-center justify-center w-36 cursor-pointer hover:bg-[#B8860B]/10 transition-colors">
+                <span className="material-symbols-outlined text-[#B8860B] mb-1">add</span>
+                <span className="text-[10px] font-bold text-[#B8860B] uppercase">Empty</span>
               </div>
             </div>
           </div>
@@ -239,7 +239,7 @@ export default function NetworkPage() {
           <button
             id="view-full-tree-btn"
             onClick={() => setShowFullTree(true)}
-            className="flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#6C47FF] to-[#5e35f1] text-white font-bold rounded-2xl shadow-[0_8px_24px_rgba(108,71,255,0.4)] hover:shadow-[0_12px_32px_rgba(108,71,255,0.6)] active:scale-[0.97] transition-all duration-300"
+            className="flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#FFD700] to-[#B8860B] text-black font-bold rounded-2xl shadow-[0_8px_24px_rgba(255,215,0,0.3)] hover:shadow-[0_12px_32px_rgba(255,215,0,0.5)] active:scale-[0.97] transition-all duration-300"
           >
             <span className="material-symbols-outlined text-[22px]">account_tree</span>
             View Full Network Tree
@@ -251,7 +251,7 @@ export default function NetworkPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pb-12">
           <div className="glass-card p-6 rounded-2xl">
             <div className="flex items-center gap-3 mb-4">
-              <span className="material-symbols-outlined text-[#6C47FF]">groups</span>
+              <span className="material-symbols-outlined text-[#FFD700]">groups</span>
               <h3 className="font-semibold text-white">Total Nodes</h3>
             </div>
             <div className="text-3xl font-bold text-white">1,248</div>
@@ -259,22 +259,22 @@ export default function NetworkPage() {
           </div>
           <div className="glass-card p-6 rounded-2xl">
             <div className="flex items-center gap-3 mb-4">
-              <span className="material-symbols-outlined text-cyan-400">align_horizontal_left</span>
+              <span className="material-symbols-outlined text-[#FFD700]">align_horizontal_left</span>
               <h3 className="font-semibold text-white">Left Branch</h3>
             </div>
             <div className="text-3xl font-bold text-white">612</div>
             <div className="w-full bg-white/5 h-1.5 rounded-full mt-4">
-              <div className="bg-cyan-500 h-full rounded-full" style={{ width: "49%" }} />
+              <div className="bg-[#FFD700] h-full rounded-full" style={{ width: "49%" }} />
             </div>
           </div>
           <div className="glass-card p-6 rounded-2xl">
             <div className="flex items-center gap-3 mb-4">
-              <span className="material-symbols-outlined text-purple-400">align_horizontal_right</span>
+              <span className="material-symbols-outlined text-[#B8860B]">align_horizontal_right</span>
               <h3 className="font-semibold text-white">Right Branch</h3>
             </div>
             <div className="text-3xl font-bold text-white">636</div>
             <div className="w-full bg-white/5 h-1.5 rounded-full mt-4">
-              <div className="bg-purple-500 h-full rounded-full" style={{ width: "51%" }} />
+              <div className="bg-[#B8860B] h-full rounded-full" style={{ width: "51%" }} />
             </div>
           </div>
         </div>

@@ -8,7 +8,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden flex flex-col items-center justify-center px-6 py-12 bg-[#0e0d17]">
+    <div className="min-h-screen relative overflow-hidden flex flex-col items-center justify-center px-6 py-12 bg-[#000000]">
       {/* Background elements */}
       <div className="fixed inset-0 z-0 mesh-gradient opacity-40"></div>
       <div className="fixed top-[-10%] left-[-10%] w-[500px] h-[500px] bg-primary-container/20 blur-[120px] rounded-full pointer-events-none"></div>
@@ -24,8 +24,8 @@ export default function LoginPage() {
         {/* Logo and Title */}
         <Link to="/" className="flex flex-col items-center mb-10 text-center w-full group">
           <div className="relative mb-6 group-hover:scale-105 transition-transform duration-300">
-            <div className="absolute inset-0 bg-[#6C47FF] blur-3xl opacity-50 rounded-full scale-150"></div>
-            <div className="relative w-20 h-20 bg-gradient-to-br from-[#6C47FF] to-[#8A70FF] rounded-2xl flex items-center justify-center shadow-[0_0_40px_rgba(108,71,255,0.6)] border border-white/10">
+            <div className="absolute inset-0 bg-[#FFD700] blur-3xl opacity-30 rounded-full scale-150"></div>
+            <div className="relative w-20 h-20 bg-gradient-to-br from-[#FFD700] to-[#B8860B] rounded-2xl flex items-center justify-center shadow-[0_0_40px_rgba(255,215,0,0.4)] border border-white/10">
               <span
                 className="material-symbols-outlined text-4xl text-white"
                 style={{ fontVariationSettings: "'FILL' 1" }}
@@ -45,7 +45,7 @@ export default function LoginPage() {
           <form onSubmit={handleSubmit} className="space-y-5">
             <div className="space-y-2">
               <input
-                className="w-full bg-[#14121c] border border-white/5 rounded-xl px-4 py-4 text-white placeholder:text-white/30 focus:outline-none focus:border-primary-container/50 focus:ring-1 focus:ring-primary-container/50 transition-all"
+                className="w-full bg-[#0A0A0A] border border-white/5 rounded-xl px-4 py-4 text-white placeholder:text-white/30 focus:outline-none focus:border-primary-container/50 focus:ring-1 focus:ring-primary-container/50 transition-all"
                 id="email"
                 name="email"
                 placeholder="Email Address"
@@ -57,7 +57,7 @@ export default function LoginPage() {
             <div className="space-y-2">
               <div className="relative">
                 <input
-                  className="w-full bg-[#14121c] border border-white/5 rounded-xl px-4 py-4 text-white placeholder:text-white/30 focus:outline-none focus:border-primary-container/50 focus:ring-1 focus:ring-primary-container/50 transition-all"
+                  className="w-full bg-[#0A0A0A] border border-white/5 rounded-xl px-4 py-4 text-white placeholder:text-white/30 focus:outline-none focus:border-primary-container/50 focus:ring-1 focus:ring-primary-container/50 transition-all"
                   id="password"
                   name="password"
                   placeholder="Password"
@@ -76,7 +76,7 @@ export default function LoginPage() {
             <div className="flex items-center justify-between pt-1">
               <label className="flex items-center space-x-2 cursor-pointer group">
                 <input
-                  className="w-4 h-4 rounded border-white/10 bg-white/5 text-[#6C47FF] focus:ring-[#6C47FF]/50 transition-all cursor-pointer"
+                  className="w-4 h-4 rounded border-white/10 bg-white/5 text-[#FFD700] focus:ring-[#FFD700]/50 transition-all cursor-pointer"
                   type="checkbox"
                 />
                 <span className="text-xs font-medium text-white/50 group-hover:text-white/80 transition-colors">
@@ -84,7 +84,7 @@ export default function LoginPage() {
                 </span>
               </label>
               <a
-                className="text-xs font-medium text-[#6C47FF] hover:text-white transition-colors"
+                className="text-xs font-medium text-[#FFD700] hover:text-white transition-colors"
                 href="#"
               >
                 Forgot Password?
@@ -92,7 +92,7 @@ export default function LoginPage() {
             </div>
 
             <button
-              className="w-full bg-gradient-to-r from-[#6C47FF] to-[#5e35f1] text-white font-bold py-4 rounded-xl shadow-[0_8px_24px_rgba(108,71,255,0.4)] hover:shadow-[0_12px_32px_rgba(108,71,255,0.6)] active:scale-[0.98] transition-all duration-300"
+              className="w-full bg-gradient-to-r from-[#FFD700] to-[#B8860B] text-black font-bold py-4 rounded-xl shadow-[0_8px_24px_rgba(255,215,0,0.3)] hover:shadow-[0_12px_32px_rgba(255,215,0,0.5)] active:scale-[0.98] transition-all duration-300"
               type="submit"
             >
               Login

@@ -18,14 +18,14 @@ const transactions = [
 
 export default function WalletPage() {
   return (
-    <div className="min-h-screen relative overflow-x-hidden flex flex-col bg-[#0e0d17]">
+    <div className="min-h-screen relative overflow-x-hidden flex flex-col bg-[#000000]">
       <TopHeader />
       <main className="flex-1 pt-24 pb-32 px-4 sm:px-6 w-full max-w-5xl mx-auto space-y-6">
 
         {/* Total Balance Card */}
         <div className="relative overflow-hidden glass-card rounded-[24px] p-8 text-center border border-white/5">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#6C47FF]/10 to-transparent pointer-events-none" />
-          <div className="absolute -top-16 -right-16 w-48 h-48 bg-[#6C47FF]/20 blur-[80px] rounded-full pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#FFD700]/10 to-transparent pointer-events-none" />
+          <div className="absolute -top-16 -right-16 w-48 h-48 bg-[#FFD700]/20 blur-[80px] rounded-full pointer-events-none" />
           <p className="text-xs font-bold text-white/40 tracking-widest uppercase mb-3">Total Portfolio Value</p>
           <h1 className="text-5xl font-black text-white tracking-tight mb-1">$4,711.50</h1>
           <p className="text-sm text-[#3adfab] font-semibold">
@@ -53,8 +53,8 @@ export default function WalletPage() {
                 key={asset.symbol}
                 className="glass-card rounded-[18px] p-5 border border-white/5 flex items-center gap-4 hover:border-white/10 hover:bg-white/[0.03] transition-all cursor-pointer group"
               >
-                <div className="w-12 h-12 rounded-2xl bg-[#6C47FF]/10 border border-[#6C47FF]/20 flex items-center justify-center flex-shrink-0 group-hover:bg-[#6C47FF]/20 transition-colors">
-                  <span className="material-symbols-outlined text-[#6C47FF] text-[22px]">{asset.icon}</span>
+                <div className="w-12 h-12 rounded-2xl bg-[#FFD700]/10 border border-[#FFD700]/20 flex items-center justify-center flex-shrink-0 group-hover:bg-[#FFD700]/20 transition-colors">
+                  <span className="material-symbols-outlined text-[#FFD700] text-[22px]">{asset.icon}</span>
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-baseline gap-2">
@@ -78,7 +78,7 @@ export default function WalletPage() {
         <div>
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-base font-bold text-white/60 tracking-widest uppercase">Transactions</h2>
-            <button className="text-[#6C47FF] text-xs font-bold hover:underline flex items-center gap-1">
+            <button className="text-[#FFD700] text-xs font-bold hover:underline flex items-center gap-1">
               View all <span className="material-symbols-outlined text-[14px]">arrow_forward</span>
             </button>
           </div>
