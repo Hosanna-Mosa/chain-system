@@ -1,18 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { TopHeader } from "@/components/TopHeader";
 import { BottomNav } from "@/components/BottomNav";
-
-export const Route = createFileRoute("/network")({
-  head: () => ({
-    meta: [
-      { title: "My Network Tree — ChainVerse" },
-      { name: "description", content: "Visualize your multi-tier ChainVerse network." },
-      { property: "og:title", content: "My Network Tree — ChainVerse" },
-    ],
-  }),
-  component: NetworkPage,
-});
 
 // ─── Deep Tree Data ───────────────────────────────────────────────────────────
 type TreeNode = {
@@ -152,7 +140,7 @@ function FullTreeModal({ onClose }: { onClose: () => void }) {
 }
 
 // ─── Network Page ─────────────────────────────────────────────────────────────
-function NetworkPage() {
+export default function NetworkPage() {
   const [showFullTree, setShowFullTree] = useState(false);
 
   return (

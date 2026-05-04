@@ -1,21 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { TopHeader } from "@/components/TopHeader";
 import { BottomNav } from "@/components/BottomNav";
-
-export const Route = createFileRoute("/wallet")({
-  head: () => ({
-    meta: [
-      { title: "Wallet — ChainVerse" },
-      {
-        name: "description",
-        content: "Manage your ChainVerse wallet. Deposit, withdraw, and track your crypto assets.",
-      },
-      { property: "og:title", content: "Wallet — ChainVerse" },
-      { property: "og:description", content: "Your ChainVerse crypto wallet at a glance." },
-    ],
-  }),
-  component: WalletPage,
-});
 
 const assets = [
   { symbol: "CV", name: "ChainVerse Coin", balance: "1,250.00", usd: "$3,125.00", change: "+5.2%", positive: true, icon: "toll" },
@@ -32,7 +16,7 @@ const transactions = [
   { type: "Transfer", amount: "-0.05 ETH", usd: "-$124.00", date: "Apr 25, 2026", icon: "swap_horiz", positive: false },
 ];
 
-function WalletPage() {
+export default function WalletPage() {
   return (
     <div className="min-h-screen relative overflow-x-hidden flex flex-col bg-[#0e0d17]">
       <TopHeader />

@@ -1,21 +1,6 @@
-import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { useNavigate } from "react-router-dom";
 import { TopHeader } from "@/components/TopHeader";
 import { BottomNav } from "@/components/BottomNav";
-
-export const Route = createFileRoute("/profile")({
-  head: () => ({
-    meta: [
-      { title: "Profile — ChainVerse" },
-      {
-        name: "description",
-        content: "Manage your ChainVerse profile, security settings, and account preferences.",
-      },
-      { property: "og:title", content: "Profile — ChainVerse" },
-      { property: "og:description", content: "Your ChainVerse account profile and settings." },
-    ],
-  }),
-  component: ProfilePage,
-});
 
 const stats = [
   { label: "Total Referrals", value: "24", icon: "group_add", color: "#6C47FF" },
@@ -43,7 +28,7 @@ const menuItems = [
   ]},
 ];
 
-function ProfilePage() {
+export default function ProfilePage() {
   const navigate = useNavigate();
   return (
     <div className="min-h-screen relative overflow-x-hidden flex flex-col bg-[#0e0d17]">
@@ -158,7 +143,7 @@ function ProfilePage() {
 
         {/* Logout */}
         <button
-          onClick={() => navigate({ to: "/" })}
+          onClick={() => navigate("/")}
           className="w-full py-4 rounded-[18px] border border-[#ffb4ab]/20 bg-[#ffb4ab]/5 text-[#ffb4ab] font-bold flex items-center justify-center gap-2 hover:bg-[#ffb4ab]/10 active:scale-[0.98] transition-all"
         >
           <span className="material-symbols-outlined text-[20px]">logout</span>

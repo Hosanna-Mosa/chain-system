@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "@tanstack/react-router";
+import { Link, useNavigate } from "react-router-dom";
 
 interface TopHeaderProps {
   user?: string;
@@ -58,7 +58,7 @@ export function TopHeader({ user = "Alex Rivera" }: TopHeaderProps) {
             </div>
             <button
               type="button"
-              onClick={() => navigate({ to: "/" })}
+              onClick={() => navigate("/")}
               className="material-symbols-outlined text-slate-400 hover:text-white cursor-pointer active:scale-95 transition-transform bg-transparent border-0 p-0"
               aria-label="Log out"
             >

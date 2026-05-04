@@ -1,28 +1,9 @@
 import { useState } from "react";
-import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { Link, useNavigate } from "react-router-dom";
 import { TopHeader } from "@/components/TopHeader";
 import { BottomNav } from "@/components/BottomNav";
 
-export const Route = createFileRoute("/register")({
-  head: () => ({
-    meta: [
-      { title: "Create Account — ChainVerse" },
-      {
-        name: "description",
-        content:
-          "Join ChainVerse and claim your starting bonus. Open an institutional-grade decentralized finance account in minutes.",
-      },
-      { property: "og:title", content: "Create Account — ChainVerse" },
-      {
-        property: "og:description",
-        content: "Join ChainVerse and claim your starting bonus reward.",
-      },
-    ],
-  }),
-  component: RegisterPage,
-});
-
-function RegisterPage() {
+export default function RegisterPage() {
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
   const [depositOption, setDepositOption] = useState<"split" | "single">("split");
@@ -49,16 +30,16 @@ function RegisterPage() {
   const handleRegister = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // In a real app, you'd validate the ref IDs and send data to API
-    navigate({ to: "/dashboard" });
+    navigate("/dashboard");
   };
 
   return (
     <div className="min-h-screen bg-[#0e0d17] text-white">
       {/* Custom Header */}
       <header className="w-full h-16 flex items-center justify-between px-6 border-b border-white/5 bg-[#0e0d17]/80 backdrop-blur-md sticky top-0 z-50">
-        <div className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2">
           <span className="text-xl font-black tracking-tight whitespace-nowrap">ChainVerse</span>
-        </div>
+        </Link>
         <div className="flex items-center gap-4">
           <button className="w-8 h-8 flex items-center justify-center rounded-full text-white/50 hover:text-white transition-colors">
             <span className="material-symbols-outlined text-[20px]">dark_mode</span>
@@ -347,7 +328,7 @@ function RegisterPage() {
           <div className="text-center mt-8">
             <p className="text-sm text-white/40">
               Already have an account?{" "}
-              <Link to="/" className="text-white font-bold hover:underline ml-1">
+              <Link to="/login" className="text-white font-bold hover:underline ml-1">
                 Login
               </Link>
             </p>
@@ -358,4 +339,3 @@ function RegisterPage() {
   );
 }
 
-export default RegisterPage;

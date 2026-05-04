@@ -1,27 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { TopHeader } from "@/components/TopHeader";
 import { BottomNav } from "@/components/BottomNav";
 
-export const Route = createFileRoute("/dashboard")({
-  head: () => ({
-    meta: [
-      { title: "Dashboard — ChainVerse" },
-      {
-        name: "description",
-        content:
-          "Track your ChainVerse portfolio, level progress, referral bonuses, and daily ROI in real time.",
-      },
-      { property: "og:title", content: "Dashboard — ChainVerse" },
-      {
-        property: "og:description",
-        content: "Your ChainVerse portfolio at a glance.",
-      },
-    ],
-  }),
-  component: DashboardPage,
-});
-
-function DashboardPage() {
+export default function DashboardPage() {
   return (
     <div className="min-h-screen relative overflow-x-hidden flex flex-col">
       <TopHeader />
