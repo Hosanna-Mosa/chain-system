@@ -10,7 +10,7 @@ export function BottomNav() {
         to="/dashboard"
         className={`flex flex-col items-center justify-center px-4 py-2 transition-all active:scale-90 duration-300 ${
           isActive("/dashboard")
-            ? "text-[#FFD700] bg-[#FFD700]/10 rounded-xl"
+            ? "text-[#D4AF37] bg-[#D4AF37]/10 rounded-xl"
             : "text-slate-500 hover:bg-white/5"
         }`}
       >
@@ -29,7 +29,7 @@ export function BottomNav() {
         to="/network"
         className={`flex flex-col items-center justify-center px-4 py-2 transition-all active:scale-90 duration-300 ${
           isActive("/network")
-            ? "text-[#FFD700] bg-[#FFD700]/10 rounded-xl"
+            ? "text-[#D4AF37] bg-[#D4AF37]/10 rounded-xl"
             : "text-slate-500 hover:bg-white/5"
         }`}
       >
@@ -48,7 +48,7 @@ export function BottomNav() {
         to="/wallet"
         className={`flex flex-col items-center justify-center px-4 py-2 transition-all active:scale-90 duration-300 ${
           isActive("/wallet")
-            ? "text-[#FFD700] bg-[#FFD700]/10 rounded-xl"
+            ? "text-[#D4AF37] bg-[#D4AF37]/10 rounded-xl"
             : "text-slate-500 hover:bg-white/5"
         }`}
       >
@@ -67,7 +67,7 @@ export function BottomNav() {
         to="/profile"
         className={`flex flex-col items-center justify-center px-4 py-2 transition-all active:scale-90 duration-300 ${
           isActive("/profile")
-            ? "text-[#FFD700] bg-[#FFD700]/10 rounded-xl"
+            ? "text-[#D4AF37] bg-[#D4AF37]/10 rounded-xl"
             : "text-slate-500 hover:bg-white/5"
         }`}
       >

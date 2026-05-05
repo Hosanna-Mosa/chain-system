@@ -3,9 +3,9 @@ import { TopHeader } from "@/components/TopHeader";
 import { BottomNav } from "@/components/BottomNav";
 
 const stats = [
-  { label: "Total Referrals", value: "24", icon: "group_add", color: "#FFD700" },
-  { label: "CV Earned", value: "1,250", icon: "toll", color: "#FFD700" },
-  { label: "Days Active", value: "147", icon: "calendar_month", color: "#FFD700" },
+  { label: "Total Referrals", value: "24", icon: "group_add", color: "#D4AF37" },
+  { label: "CV Earned", value: "1,250", icon: "toll", color: "#D4AF37" },
+  { label: "Days Active", value: "147", icon: "calendar_month", color: "#D4AF37" },
   { label: "Current Level", value: "Bronze", icon: "workspace_premium", color: "#CD7F32" },
 ];
 
@@ -37,13 +37,13 @@ export default function ProfilePage() {
 
         {/* Profile Hero */}
         <div className="relative overflow-hidden glass-card rounded-[24px] p-8 border border-white/5">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#FFD700]/10 to-transparent pointer-events-none" />
-          <div className="absolute -top-20 -right-20 w-60 h-60 bg-[#FFD700]/15 blur-[100px] rounded-full pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/10 to-transparent pointer-events-none" />
+          <div className="absolute -top-20 -right-20 w-60 h-60 bg-[#D4AF37]/15 blur-[100px] rounded-full pointer-events-none" />
 
           <div className="relative flex flex-col sm:flex-row items-center sm:items-start gap-6">
             {/* Avatar */}
             <div className="relative flex-shrink-0">
-              <div className="w-24 h-24 rounded-2xl overflow-hidden border-2 border-[#FFD700]/40 shadow-[0_0_30px_rgba(255,215,0,0.3)]">
+              <div className="w-24 h-24 rounded-2xl overflow-hidden border-2 border-[#D4AF37]/40 shadow-[0_0_30px_rgba(212,175,55,0.3)]">
                 <img
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuD30qnBweug_yxUc1V67lHrZPzWYRi0IC9gajx5FH9y1hvLdJY0M01r6aU1P7XdxR4iUuFO0yE9oCgM_65JsasrFV5XREWd-doJGIIe2AmlObsMxKgw2XZXZnwkOtNT2mOut-K3-527Qgl621lljxiZLn9NEguMZcNMMggnkQKB9z8LnMYSJynlDLuY0JG3cziKIHOS3i7XXcHVL9rw48NqzOOcd9sO5OMx9YS8dj3Plmib-f0upHXWJ9_7snSfrOGAPTyDe4LT"
                   alt="Alex Rivera"
@@ -67,7 +67,7 @@ export default function ProfilePage() {
               <p className="text-white/50 text-sm mb-1">alex.rivera@chainverse.com</p>
               <p className="text-white/30 text-xs font-mono">ID: VERSE-99-RIVERA</p>
               <div className="mt-4 flex flex-wrap gap-2 justify-center sm:justify-start">
-                <button className="flex items-center gap-1.5 text-xs font-bold bg-[#FFD700]/10 border border-[#FFD700]/20 text-[#FFD700] hover:bg-[#FFD700]/20 px-3 py-1.5 rounded-lg transition-colors">
+                <button className="flex items-center gap-1.5 text-xs font-bold bg-[#D4AF37]/10 border border-[#D4AF37]/20 text-[#D4AF37] hover:bg-[#D4AF37]/20 px-3 py-1.5 rounded-lg transition-colors">
                   <span className="material-symbols-outlined text-[14px]">person_edit</span>
                   Edit Profile
                 </button>
@@ -103,7 +103,7 @@ export default function ProfilePage() {
             <div className="flex-1 bg-white/5 border border-white/5 rounded-xl px-4 py-3 text-sm text-white/50 font-mono truncate">
               chainverse.app/reg?ref=alex2024
             </div>
-            <button className="bg-[#FFD700]/10 border border-[#FFD700]/20 text-[#FFD700] hover:bg-[#FFD700] hover:text-black px-4 rounded-xl transition-all font-bold text-xs flex items-center gap-1">
+            <button className="bg-[#D4AF37]/10 border border-[#D4AF37]/20 text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black px-4 rounded-xl transition-all font-bold text-xs flex items-center gap-1">
               <span className="material-symbols-outlined text-[18px]">content_copy</span>
             </button>
           </div>
@@ -120,8 +120,8 @@ export default function ProfilePage() {
                     key={item.label}
                     className="w-full flex items-center gap-4 p-4 hover:bg-white/[0.03] transition-colors text-left group"
                   >
-                    <div className="w-9 h-9 rounded-xl bg-white/5 border border-white/5 flex items-center justify-center flex-shrink-0 group-hover:bg-[#FFD700]/10 group-hover:border-[#FFD700]/20 transition-colors">
-                      <span className="material-symbols-outlined text-[18px] text-white/50 group-hover:text-[#FFD700] transition-colors">{item.icon}</span>
+                    <div className="w-9 h-9 rounded-xl bg-white/5 border border-white/5 flex items-center justify-center flex-shrink-0 group-hover:bg-[#D4AF37]/10 group-hover:border-[#D4AF37]/20 transition-colors">
+                      <span className="material-symbols-outlined text-[18px] text-white/50 group-hover:text-[#D4AF37] transition-colors">{item.icon}</span>
                     </div>
                     <div className="flex-1 min-w-0">
                       <p className="text-sm font-semibold text-white">{item.label}</p>

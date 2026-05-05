@@ -63,7 +63,7 @@ export default function LandingPage() {
             </Link>
             <Link 
               to="/register" 
-              className="px-6 py-2.5 text-sm font-bold primary-gradient rounded-full shadow-[0_8px_20px_rgba(255,215,0,0.3)] hover:shadow-[0_12px_25px_rgba(255,215,0,0.5)] hover:scale-[1.05] text-black active:scale-[0.98] transition-all duration-300"
+              className="px-6 py-2.5 text-sm font-bold primary-gradient rounded-full shadow-[0_8px_20px_rgba(212,175,55,0.3)] hover:shadow-[0_12px_25px_rgba(212,175,55,0.5)] hover:scale-[1.05] text-black active:scale-[0.98] transition-all duration-300"
             >
               Register Now
             </Link>
@@ -83,7 +83,7 @@ export default function LandingPage() {
           </div>
           
           <h1 className="text-5xl md:text-8xl font-black tracking-tight mb-8 leading-[1.1] max-w-5xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-100">
-            The Future of <span className="text-primary-container bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#FFD700]">Community-Driven</span> Finance
+            The Future of <span className="text-primary-container bg-clip-text text-transparent bg-gradient-to-r from-[#D4AF37] to-[#D4AF37]">Community-Driven</span> Finance
           </h1>
           
           <p className="text-lg md:text-2xl text-white/50 max-w-3xl mb-12 leading-relaxed animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-200">
@@ -330,8 +330,8 @@ export default function LandingPage() {
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="space-y-10">
               {[
-                { label: "Public Sale / Liquidity", value: "40%", desc: "Open to the community for immediate growth.", color: "bg-[#FFD700]" },
-                { label: "Staking Rewards", value: "20%", desc: "Rewarding long-term holders and participants.", color: "bg-[#FFD700]" },
+                { label: "Public Sale / Liquidity", value: "40%", desc: "Open to the community for immediate growth.", color: "bg-[#D4AF37]" },
+                { label: "Staking Rewards", value: "20%", desc: "Rewarding long-term holders and participants.", color: "bg-[#D4AF37]" },
                 { label: "Team (Locked 2 Years)", value: "15%", desc: "Ensuring long-term commitment and trust.", color: "bg-[#3adfab]" },
                 { label: "Marketing & Partnerships", value: "15%", desc: "Fueling global adoption and ecosystem reach.", color: "bg-blue-500" },
                 { label: "Reserve Fund", value: "10%", desc: "Safety net for unexpected ecosystem needs.", color: "bg-white/20" }
@@ -373,8 +373,8 @@ export default function LandingPage() {
                 <h4 className="text-xl font-bold mb-2">2% Holder Rewards</h4>
                 <p className="text-sm text-white/50 leading-relaxed">Earn passive ABC simply by holding. Redistributed automatically to all community wallets.</p>
               </div>
-              <div className="glass-card p-10 rounded-[32px] border-[#FFD700]/10 hover:border-[#FFD700]/30 transition-all duration-500">
-                <div className="w-14 h-14 rounded-2xl bg-[#FFD700]/20 flex items-center justify-center text-[#FFD700] mb-6">
+              <div className="glass-card p-10 rounded-[32px] border-[#D4AF37]/10 hover:border-[#D4AF37]/30 transition-all duration-500">
+                <div className="w-14 h-14 rounded-2xl bg-[#D4AF37]/20 flex items-center justify-center text-[#D4AF37] mb-6">
                   <Lock className="w-7 h-7" />
                 </div>
                 <h4 className="text-xl font-bold mb-2">2-Year Lock</h4>
@@ -484,7 +484,7 @@ export default function LandingPage() {
                   </div>
                   <div className="col-span-2 glass-card p-10 rounded-[32px] border-white/10 hover:bg-white/5 transition-all group flex items-center justify-between">
                     <div className="flex items-center gap-6">
-                      <div className="w-16 h-16 rounded-2xl bg-[#FFD700]/20 flex items-center justify-center text-[#FFD700] group-hover:scale-110 transition-transform">
+                      <div className="w-16 h-16 rounded-2xl bg-[#D4AF37]/20 flex items-center justify-center text-[#D4AF37] group-hover:scale-110 transition-transform">
                         <Vote className="w-8 h-8" />
                       </div>
                       <div>

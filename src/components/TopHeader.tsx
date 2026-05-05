@@ -7,7 +7,7 @@ interface TopHeaderProps {
 export function TopHeader({ user = "Alex Rivera" }: TopHeaderProps) {
   const navigate = useNavigate();
   return (
-    <header className="bg-black/80 backdrop-blur-xl fixed top-0 w-full z-50 border-b border-white/10 shadow-[0_4px_20px_rgba(255,215,0,0.08)]">
+    <header className="bg-black/80 backdrop-blur-xl fixed top-0 w-full z-50 border-b border-white/10 shadow-[0_4px_20px_rgba(212,175,55,0.08)]">
       <div className="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
         <Link
           to="/dashboard"
@@ -49,7 +49,7 @@ export function TopHeader({ user = "Alex Rivera" }: TopHeaderProps) {
             <span className="text-slate-400 text-sm hidden sm:block font-['Inter'] font-medium">
               {user}
             </span>
-            <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-[#FFD700]/30">
+            <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-[#D4AF37]/30">
               <img
                 alt="User profile avatar"
                 className="w-full h-full object-cover"

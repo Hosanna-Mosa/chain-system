@@ -24,8 +24,8 @@ export default function LoginPage() {
         {/* Logo and Title */}
         <Link to="/" className="flex flex-col items-center mb-10 text-center w-full group">
           <div className="relative mb-6 group-hover:scale-105 transition-transform duration-300">
-            <div className="absolute inset-0 bg-[#FFD700] blur-3xl opacity-30 rounded-full scale-150"></div>
-            <div className="relative w-20 h-20 bg-gradient-to-br from-[#FFD700] to-[#FFD700] rounded-2xl flex items-center justify-center shadow-[0_0_40px_rgba(255,215,0,0.4)] border border-white/10">
+            <div className="absolute inset-0 bg-[#D4AF37] blur-3xl opacity-30 rounded-full scale-150"></div>
+            <div className="relative w-20 h-20 bg-gradient-to-br from-[#D4AF37] to-[#D4AF37] rounded-2xl flex items-center justify-center shadow-[0_0_40px_rgba(212,175,55,0.4)] border border-white/10">
               <span
                 className="material-symbols-outlined text-4xl text-white"
                 style={{ fontVariationSettings: "'FILL' 1" }}
@@ -76,7 +76,7 @@ export default function LoginPage() {
             <div className="flex items-center justify-between pt-1">
               <label className="flex items-center space-x-2 cursor-pointer group">
                 <input
-                  className="w-4 h-4 rounded border-white/10 bg-white/5 text-[#FFD700] focus:ring-[#FFD700]/50 transition-all cursor-pointer"
+                  className="w-4 h-4 rounded border-white/10 bg-white/5 text-[#D4AF37] focus:ring-[#D4AF37]/50 transition-all cursor-pointer"
                   type="checkbox"
                 />
                 <span className="text-xs font-medium text-white/50 group-hover:text-white/80 transition-colors">
@@ -84,7 +84,7 @@ export default function LoginPage() {
                 </span>
               </label>
               <a
-                className="text-xs font-medium text-[#FFD700] hover:text-white transition-colors"
+                className="text-xs font-medium text-[#D4AF37] hover:text-white transition-colors"
                 href="#"
               >
                 Forgot Password?
@@ -92,7 +92,7 @@ export default function LoginPage() {
             </div>
 
             <button
-              className="w-full bg-gradient-to-r from-[#FFD700] to-[#FFD700] text-black font-bold py-4 rounded-xl shadow-[0_8px_24px_rgba(255,215,0,0.3)] hover:shadow-[0_12px_32px_rgba(255,215,0,0.5)] active:scale-[0.98] transition-all duration-300"
+              className="w-full bg-gradient-to-r from-[#D4AF37] to-[#D4AF37] text-black font-bold py-4 rounded-xl shadow-[0_8px_24px_rgba(212,175,55,0.3)] hover:shadow-[0_12px_32px_rgba(212,175,55,0.5)] active:scale-[0.98] transition-all duration-300"
               type="submit"
             >
               Login
